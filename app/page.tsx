@@ -1,65 +1,77 @@
-import Image from "next/image";
+import {FloatingCard} from "@/app/shared/ui/FloatingCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+      <main className="min-h-screen overflow-hidden bg-[#f8e4da] text-[#111827]">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+          <div className="flex items-center gap-2 font-semibold">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#111827] text-white">
+              ⌖
+            </div>
+            AddressHub
+          </div>
+
+          <div className="hidden items-center gap-10 text-sm md:flex">
+            <a href="#">Features</a>
+            <a href="#">How it works</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <button className="rounded-xl bg-[#111827] px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-105">
+            Get Started
+          </button>
+        </nav>
+
+        <section className="relative mx-auto grid min-h-[calc(100vh-88px)] max-w-7xl items-center px-6 pb-16 md:grid-cols-2">
+          <div className="z-10 max-w-xl">
+            <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+              Everything you <br />
+              need for{" "}
+              <span className="text-[#6d5dfc]">your address</span>, <br />
+              in one place
+            </h1>
+
+            <p className="mt-6 max-w-md text-base leading-7 text-gray-700">
+              Weather, alarms, news and traffic — all personalized for the place
+              that matters to you.
+            </p>
+
+            <div className="mt-10 flex items-center gap-5">
+              <button className="rounded-xl bg-[#111827] px-7 py-4 text-sm font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+                Get Started
+              </button>
+
+              <button className="flex items-center gap-2 text-sm font-medium text-[#111827]">
+                Learn more
+                <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#111827]">
+                →
+              </span>
+              </button>
+            </div>
+          </div>
+
+          <div className="relative mt-16 h-[480px] md:mt-0">
+            <div className="absolute inset-x-0 bottom-0 h-72 rounded-[50%] bg-[#6d5dfc]/20 blur-3xl" />
+
+            <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-[#7c6cff]/30 blur-3xl" />
+
+            <div className="absolute bottom-16 left-1/2 h-44 w-28 -translate-x-1/2 rounded-full bg-[#6d5dfc] shadow-2xl shadow-[#6d5dfc]/50">
+              <div className="absolute left-1/2 top-10 h-12 w-12 -translate-x-1/2 rounded-full bg-[#f8e4da]" />
+              <div className="absolute -bottom-10 left-1/2 h-20 w-20 -translate-x-1/2 rotate-45 bg-[#6d5dfc]" />
+            </div>
+
+            <div className="absolute bottom-24 left-8 h-1 w-[520px] rotate-[-12deg] rounded-full bg-gradient-to-r from-transparent via-[#7c6cff] to-transparent shadow-[0_0_25px_#7c6cff]" />
+            <div className="absolute bottom-36 left-0 h-1 w-[600px] rotate-[8deg] rounded-full bg-gradient-to-r from-transparent via-[#7c6cff] to-transparent shadow-[0_0_25px_#7c6cff]" />
+
+            <FloatingCard className="left-20 top-16" icon="☁️" />
+            <FloatingCard className="right-20 top-10" icon="🔔" />
+            <FloatingCard className="left-4 top-44" icon="🚗" />
+            <FloatingCard className="right-8 top-56" icon="📰" />
+
+            <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#111827]/40 to-transparent" />
+          </div>
+        </section>
       </main>
-    </div>
   );
 }
