@@ -1,7 +1,10 @@
+"use client";
+
 import {FloatingCardProps} from "./types";
+import {ReactElement} from "react";
 
 
-export default function FloatingCard(props: FloatingCardProps) {
+export default function FloatingCard(props: FloatingCardProps): ReactElement {
     return (
         <>
             <div
