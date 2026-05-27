@@ -6,4 +6,6 @@ export type searchProps = {
 type Geo = {
     lat: string | null,
     long: string | null,
+    state: string | null,
+    country: string | null,
 }

@@ -6,7 +6,7 @@ import {WeatherWidgetProps} from "@/app/widgets/weather/types";
 export default function weatherWidget(props: WeatherWidgetProps) {
     return (
         <aside
-            className="absolute right-full top-32 mr-6 hidden w-[300px] rounded-[32px] border border-white/15 bg-white/10 p-6 text-white shadow-2xl backdrop-blur-2xl xl:block">
+            className="mt-6 w-full rounded-[32px] border border-white/15 bg-white/10 p-6 text-white shadow-2xl backdrop-blur-2xl lg:absolute lg:right-full lg:top-32 lg:mr-6 lg:mt-0 lg:w-[300px]">
             <div className="flex items-start justify-between">
                 <div>
                     <p className="text-sm text-white/60">Current weather</p>
