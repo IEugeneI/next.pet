@@ -26,28 +26,10 @@ export default function DashboardPageContent() {
         );
 
 
-
     return (
-        <main className="relative flex min-h-screen items-start justify-center overflow-hidden bg-[#f8e4da] px-6 ">
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{
-                    backgroundImage: "url('/background.png')",
-                }}
-            />
-
-            <div className="absolute inset-0 bg-[#1a1333]/50"/>
-
-            <div className="relative z-10 w-full max-w-4xl">
-
+        <section className="w-full">
+            <div className="mx-auto w-full max-w-4xl px-6">
                 <div className="mb-10 text-center">
-                    <Link
-                        href="/"
-                        className="mb-6 inline-flex items-center gap-2 text-sm text-white/70 transition hover:text-white"
-                    >
-                        ← Back to home
-                    </Link>
-
                     <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
                         Search your address
                     </h1>
@@ -106,7 +88,6 @@ export default function DashboardPageContent() {
                     <Alarm state={place.state} onSelect={setAlarm}/>
                 )}
             </div>
-
-        </main>
+        </section>
     )
 }
